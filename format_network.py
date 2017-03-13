@@ -50,6 +50,7 @@ parser.add_argument('-p',
                     action='store',
                     help='password for the target NDEx account')
 
+
 parser.add_argument('-t',
                     action='store',
                     dest='template_id',
@@ -85,8 +86,7 @@ layouts.apply_directed_flow_layout(network, iterations=150, use_degree_edge_weig
 # ndex.update_cx_network(network.to_cx_stream(), args.network_id)
 
 print("saving new network with formatting")
-ndex.save_new_network(network.to_cx_stream())
-
+ndex.save_new_network(network.to_cx())
 
 
 
